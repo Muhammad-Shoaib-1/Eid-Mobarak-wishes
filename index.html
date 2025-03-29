@@ -211,12 +211,17 @@
                 font-size: 0.8rem;
             }
         }
+        .githubLink:hover{
+            text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4); 
+            /* transform: scale(1);  */
+/*             transform: scale(0.9) translate(-355.556px, -200px); */
+        }
     </style>
 </head>
 
 <body>
-    <!-- <div class="countdown" id="countdown"></div> -->
-    <div class="card pt-5">
+    <div class="countdown" id="countdown"></div>
+    <div class="card p-5">
         <h1 class="eid-text" id="greeting">✨ Eid Mubarak <span id="userNameDisplay"></span>! 🌙</h1>
         <p>May this Eid bring joy, peace, and prosperity to you and your loved ones.</p>
         <!-- <div class="name-input">
@@ -228,34 +233,31 @@
         </div>
         <div class="slider" id="wish-slider">Wishing you a blessed Eid filled with happiness!</div>
     </div>
-    <!-- <div class="share-buttons">
-        <p>Share your Eid Wishes:</p>
-        <button onclick="shareOnWhatsApp()">WhatsApp</button>
-        <button onclick="shareOnFacebook()">Facebook</button>
-        <button onclick="shareOnTwitter()">Twitter</button>
-    </div> -->
+    <div class="share-buttons">
+        <p>Developed By: <a href="https://github.com/Muhammad-waqas1" class="githubLink" style=" color: orange;">Waqas </a></p>
+    </div>
     <script>
-        // function updateCountdown() {
-        //     const eidDate = new Date();
-        //     eidDate.setDate(eidDate.getDate() + 1);
-        //     eidDate.setHours(0, 0, 0, 0);
+        function updateCountdown() {
+            const eidDate = new Date();
+            eidDate.setDate(eidDate.getDate() + 1);
+            eidDate.setHours(0, 0, 0, 0);
 
-        //     const now = new Date();
-        //     const timeDiff = eidDate - now;
+            const now = new Date();
+            const timeDiff = eidDate - now;
 
-        //     const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        //     const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-        //     const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-        //     document.getElementById('countdown').innerHTML = `Time until Eid: ${hours}h ${minutes}m ${seconds}s`;
+            document.getElementById('countdown').innerHTML = `Time until Eid: ${hours}h ${minutes}m ${seconds}s`;
 
-        //     if (timeDiff <= 0) {
-        //         document.getElementById('countdown').innerHTML = "🎉 Eid Mubarak! 🎉";
-        //     } else {
-        //         setTimeout(updateCountdown, 1000);
-        //     }
-        // }
-        // updateCountdown();
+            if (timeDiff <= 0) {
+                document.getElementById('countdown').innerHTML = "🎉 Eid Mubarak! 🎉";
+            } else {
+                setTimeout(updateCountdown, 1000);
+            }
+        }
+        updateCountdown();
 
         function getNameFromURL() {
         // Get the pathname, e.g., "/Eid-Mobarak-wishes/waqas"
@@ -269,9 +271,10 @@
 
 
         window.onload = function() {
-        const name = getNameFromURL();
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
         if (name) {
-            document.getElementById('userNameDisplay').innerText = `, ${name}`;
+          document.getElementById('userNameDisplay').innerText = `, ${name}`;
             }
         };
 
