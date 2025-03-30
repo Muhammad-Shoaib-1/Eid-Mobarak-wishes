@@ -1,0 +1,228 @@
+body {
+    background: url('https://cdn.pixabay.com/photo/2016/11/29/01/40/tree-1866602_1280.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    font-family: 'Amiri', serif;
+    overflow: hidden;
+    height: 100vh;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    /* position: relative; */
+    backdrop-filter: blur(5px);
+}
+
+/* .countdown {
+    font-size: 2rem;
+    font-weight: bold;
+    background: rgba(255, 215, 0, 0.2);
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    animation: fadeIn 2s ease-in-out, glowEffect 2s infinite alternate;
+} */
+
+.DevCL{
+    position: absolute;
+}
+.cardDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.card {
+    background: rgba(255, 255, 255, 0);
+    /* padding: 30px; */
+    margin-top: 7px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    /* backdrop-filter: blur(5px); */
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    /* position: relative; */
+    z-index: 2;
+}
+
+.card>h1 {
+    color: white;
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px gold;
+    animation: fadeIn 3s forwards, glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.eid-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    text-shadow: 0 0 10px gold;
+    opacity: 0;
+    animation: glowText 2s ease-in-out infinite alternate, fadeIn 3s forwards;
+}
+
+.image-section {
+    margin-top: 20px;
+}
+
+.image-section img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.name-input {
+    margin-top: 20px;
+}
+
+.name-input input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+.name-input button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background: gold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.slider {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 0 0 10px gold;
+    min-height: 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.share-buttons {
+    margin-top: 20px;
+}
+
+.share-buttons button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background: gold;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.share-buttons button:hover {
+    background: darkgoldenrod;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        overflow: auto;
+    }
+
+    .countdown {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .card {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .card>h1 {
+        font-size: 1.8rem;
+    }
+
+    .eid-text {
+        font-size: 1.2rem;
+    }
+
+    .name-input input {
+        width: 90%;
+        max-width: 200px;
+    }
+
+    .name-input button {
+        padding: 7px 10px;
+    }
+
+    .share-buttons button {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+    .DevCL {
+        position: absolute;
+        bottom: 0%;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown {
+        font-size: 1rem;
+        padding: 5px 10px;
+        top: 5px;
+        left: 5px;
+        width: auto;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card>h1 {
+        font-size: 1.5rem;
+    }
+
+    .eid-text {
+        font-size: 1rem;
+    }
+
+    .slider {
+        font-size: 1rem;
+    }
+
+    .share-buttons button {
+        padding: 5px 8px;
+        font-size: 0.8rem;
+    }
+}
+
+.githubLink:hover {
+    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+    /* transform: scale(1);  */
+    /*             transform: scale(0.9) translate(-355.556px, -200px); */
+}
+
